@@ -27,7 +27,7 @@ data "aws_subnets" "default" {
 }
 
 module "web_cluster" {
-  source        = "../../../modules/services/web-cluster"
+  source        = "github.com/Damdam12345/day9-terraform-challenge//modules/services/web-cluster?ref=v0.0.2"
   cluster_name  = "dev-cluster"
   ami_id        = "ami-09d0c9a85bf1b9ea7"
   instance_type = "t3.micro"
